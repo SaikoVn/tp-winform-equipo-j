@@ -1,0 +1,6 @@
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\bin\Debug\dominio.dll
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\bin\Debug\dominio.pdb
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\obj\Debug\dominio.dll
+C:\Users\quiro\source\repos\TPWinForm_equipo-J\dominio\obj\Debug\dominio.pdb
