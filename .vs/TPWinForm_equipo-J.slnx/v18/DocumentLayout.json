@@ -1,42 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\",
+  "WorkspaceRootPath": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C47C85E-7A0A-6C21-72C3-A5A43D89FF62}|winform-app\\winform-app.csproj|c:\\users\\quiro\\source\\repos\\tpwinform_equipo-j\\winform-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C47C85E-7A0A-6C21-72C3-A5A43D89FF62}|winform-app\\winform-app.csproj|solutionrelative:winform-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|negocio||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C47C85E-7A0A-6C21-72C3-A5A43D89FF62}|winform-app\\winform-app.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4C47C85E-7A0A-6C21-72C3-A5A43D89FF62}|winform-app\\winform-app.csproj|solutionrelative:winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|dominio||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|solutionrelative:winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|solutionrelative:dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|solutionrelative:dominio\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|solutionrelative:dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84490802-F71D-4A87-B292-DBBAF8817D0D}|dominio\\dominio.csproj|solutionrelative:dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\tpwinform_equipo-j\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tpwinform_equipo-j\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\winform-app.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:winform-app\\winform-app.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|c:\\users\\quiro\\source\\repos\\tp-winform-equipo-j\\negocio\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,124 +23,45 @@
       "DocumentGroups": [
         {
           "DockedHeight": 236,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 164,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\Program.cs",
-              "RelativeDocumentMoniker": "winform-app\\Program.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\Program.cs",
-              "RelativeToolTip": "winform-app\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T19:58:37.8Z",
+              "Title": "negocio",
+              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\negocio\\negocio.csproj",
+              "RelativeDocumentMoniker": "negocio\\negocio.csproj",
+              "ToolTip": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\negocio\\negocio.csproj",
+              "RelativeToolTip": "negocio\\negocio.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-08T19:37:33.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\Form1.cs",
-              "RelativeDocumentMoniker": "winform-app\\Form1.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\Form1.cs [Design]",
-              "RelativeToolTip": "winform-app\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T19:58:36.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "winform-app.csproj.user",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\winform-app.csproj.user",
-              "RelativeDocumentMoniker": "winform-app\\winform-app.csproj.user",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\winform-app\\winform-app.csproj.user",
-              "RelativeToolTip": "winform-app\\winform-app.csproj.user",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2026-09-07T19:57:00.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Articulo.cs",
-              "RelativeDocumentMoniker": "dominio\\Articulo.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Articulo.cs",
-              "RelativeToolTip": "dominio\\Articulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T19:13:26.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Marca.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Marca.cs",
-              "RelativeDocumentMoniker": "dominio\\Marca.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Marca.cs",
-              "RelativeToolTip": "dominio\\Marca.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T18:48:31.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Imagen.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Imagen.cs",
-              "RelativeDocumentMoniker": "dominio\\Imagen.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Imagen.cs",
-              "RelativeToolTip": "dominio\\Imagen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T18:58:49.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Categoria.cs",
-              "RelativeDocumentMoniker": "dominio\\Categoria.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\dominio\\Categoria.cs",
-              "RelativeToolTip": "dominio\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T18:49:08.696Z"
+              "Title": "dominio",
+              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\dominio\\dominio.csproj",
+              "RelativeDocumentMoniker": "dominio\\dominio.csproj",
+              "ToolTip": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\dominio\\dominio.csproj",
+              "RelativeToolTip": "dominio\\dominio.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-08T19:37:30.148Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\negocio\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\negocio\\AccesoDatos.cs",
-              "RelativeToolTip": "negocio\\AccesoDatos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T19:19:12.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\TPWinForm_equipo-J\\Form1.cs",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-J\\Form1.cs",
-              "ToolTip": "C:\\Users\\quiro\\source\\repos\\TPWinForm_equipo-J\\TPWinForm_equipo-J\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "TPWinForm_equipo-J\\Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-J\\winform-app\\Form1.cs",
+              "RelativeDocumentMoniker": "winform-app\\Form1.cs",
+              "ToolTip": "C:\\Users\\quiro\\source\\repos\\tp-winform-equipo-j-v2\\winform-app\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\tp-winform-equipo-j-v2\\winform-app\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T18:24:42.413Z"
+              "WhenOpened": "2026-09-08T19:37:27.59Z"
             }
           ]
         }
