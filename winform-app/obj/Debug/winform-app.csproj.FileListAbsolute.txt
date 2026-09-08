@@ -1,0 +1,9 @@
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\bin\Debug\winform-app.exe.config
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\bin\Debug\winform-app.exe
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\bin\Debug\winform-app.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform-app.csproj.AssemblyReference.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform_app.Properties.Resources.resources
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform-app.csproj.GenerateResource.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform-app.csproj.CoreCompileInputs.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform-app.exe
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\winform-app\obj\Debug\winform-app.pdb
