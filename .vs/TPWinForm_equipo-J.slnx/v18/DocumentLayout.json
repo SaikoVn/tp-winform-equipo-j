@@ -3,18 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|c:\\users\\quiro\\onedrive\\desktop\\proyectoutn\\dad\\tp-winform-equipo-j\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|winform-app||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|c:\\users\\quiro\\onedrive\\desktop\\proyectoutn\\dad\\tp-winform-equipo-j\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F9CFFBE-CE9E-4CA8-8282-89490828A09F}|negocio\\negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|solutionrelative:winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|solutionrelative:winform-app\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44FC3790-80EA-4F5E-B2F9-1455B16C92F5}|winform-app\\winform-app.csproj|c:\\users\\quiro\\onedrive\\desktop\\proyectoutn\\dad\\tp-winform-equipo-j\\winform-app\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|winform-app||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,11 +29,37 @@
       "DocumentGroups": [
         {
           "DockedHeight": 236,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\Form1.cs",
+              "RelativeDocumentMoniker": "winform-app\\Form1.cs",
+              "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\Form1.cs",
+              "RelativeToolTip": "winform-app\\Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T19:52:43.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticuloNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\negocio\\ArticuloNegocio.cs",
+              "RelativeDocumentMoniker": "negocio\\ArticuloNegocio.cs",
+              "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\negocio\\ArticuloNegocio.cs",
+              "RelativeToolTip": "negocio\\ArticuloNegocio.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T19:52:14.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -38,33 +69,33 @@
               "RelativeDocumentMoniker": "negocio\\AccesoDatos.cs",
               "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\negocio\\AccesoDatos.cs",
               "RelativeToolTip": "negocio\\AccesoDatos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwCMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-08T19:45:50.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "winform-app",
               "DocumentMoniker": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\winform-app.csproj",
               "RelativeDocumentMoniker": "winform-app\\winform-app.csproj",
-              "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\winform-app.csproj",
-              "RelativeToolTip": "winform-app\\winform-app.csproj",
+              "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\winform-app.csproj*",
+              "RelativeToolTip": "winform-app\\winform-app.csproj*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-09-08T19:45:06.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-08T19:45:06.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\Form1.cs",
               "RelativeDocumentMoniker": "winform-app\\Form1.cs",
               "ToolTip": "C:\\Users\\quiro\\OneDrive\\Desktop\\ProyectoUTN\\dad\\tp-winform-equipo-j\\winform-app\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "winform-app\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T19:37:27.59Z"
+              "WhenOpened": "2026-09-08T19:37:27.59Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
