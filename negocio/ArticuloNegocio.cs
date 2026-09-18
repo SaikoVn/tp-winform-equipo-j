@@ -148,5 +148,143 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public List<Articulo> filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = "Select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.IdMarca, M.Descripcion as Marca, A.IdCategoria, C.Descripcion as Categoria, (Select Top 1 ImagenUrl From IMAGENES Where IdArticulo = A.Id) as ImagenUrl From ARTICULOS A Left Join MARCAS M on A.IdMarca = M.Id Left Join CATEGORIAS C on A.IdCategoria = C.Id Where ";
+
+                if (campo == "Precio")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "A.Precio > @filtro";
+                            break;
+                        case "Menor a":
+                            consulta += "A.Precio < @filtro";
+                            break;
+                        default:
+                            consulta += "A.Precio = @filtro";
+                            break;
+                    }
+                    datos.setearParametro("@filtro", decimal.Parse(filtro));
+                }
+                else if (campo == "Nombre")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "A.Nombre like @filtro";
+                            datos.setearParametro("@filtro", filtro + "%");
+                            break;
+                        case "Termina con":
+                            consulta += "A.Nombre like @filtro";
+                            datos.setearParametro("@filtro", "%" + filtro);
+                            break;
+                        default:
+                            consulta += "A.Nombre like @filtro";
+                            datos.setearParametro("@filtro", "%" + filtro + "%");
+                            break;
+                    }
+                }
+                else // Marca
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "M.Descripcion like @filtro";
+                            datos.setearParametro("@filtro", filtro + "%");
+                            break;
+                        case "Termina con":
+                            consulta += "M.Descripcion like @filtro";
+                            datos.setearParametro("@filtro", "%" + filtro);
+                            break;
+                        default:
+                            consulta += "M.Descripcion like @filtro";
+                            datos.setearParametro("@filtro", "%" + filtro + "%");
+                            break;
+                    }
+                }
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+
+                    aux.Marca = new Marca();
+                    if (!(datos.Lector["IdMarca"] is DBNull))
+                    {
+                        aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                        aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    }
+
+                    aux.Categoria = new Categoria();
+                    if (!(datos.Lector["IdCategoria"] is DBNull))
+                    {
+                        aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                        aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    }
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public int agregarConId(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) output inserted.Id values (@codigo, @nombre, @descripcion, @idMarca, @idCategoria, @precio)");
+
+                datos.setearParametro("@codigo", nuevo.Codigo);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@idMarca", (nuevo.Marca != null && nuevo.Marca.Id != 0) ? (object)nuevo.Marca.Id : DBNull.Value);
+                datos.setearParametro("@idCategoria", (nuevo.Categoria != null && nuevo.Categoria.Id != 0) ? (object)nuevo.Categoria.Id : DBNull.Value);
+                datos.setearParametro("@precio", nuevo.Precio);
+
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                    return (int)datos.Lector[0];
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

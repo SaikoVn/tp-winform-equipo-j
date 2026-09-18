@@ -15,6 +15,8 @@ namespace winform_app
     public partial class Form1 : Form
     {
         private List<Articulo> listaArticulo;
+        private List<Imagen> imagenesArticuloActual;
+        private int indiceImagen = 0;
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +24,9 @@ namespace winform_app
 
         private void cargar()
         {
+            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Marca");
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
@@ -63,7 +68,7 @@ namespace winform_app
             {
                 try
                 {
-                    // Placeholder público de Wikimedia (no bloquea peticiones de escritorio)
+                    
                     pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
                 }
                 catch (Exception)
@@ -85,7 +90,46 @@ namespace winform_app
             if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.ImagenUrl); 
+                ImagenNegocio imgNegocio = new ImagenNegocio();
+                imagenesArticuloActual = imgNegocio.listar(seleccionado.Id);
+                indiceImagen = 0;
+                mostrarImagenActual();
+            }
+        }
+
+        private void mostrarImagenActual()
+        {
+            if (imagenesArticuloActual != null && imagenesArticuloActual.Count > 0)
+            {
+                cargarImagen(imagenesArticuloActual[indiceImagen].ImagenUrl);
+                lblPaginacion.Text = $"{indiceImagen + 1} / {imagenesArticuloActual.Count}";
+                btnAnterior.Enabled = indiceImagen > 0;
+                btnSiguiente.Enabled = indiceImagen < imagenesArticuloActual.Count - 1;
+            }
+            else
+            {
+                cargarImagen(""); // Carga el placeholder
+                lblPaginacion.Text = "0 / 0";
+                btnAnterior.Enabled = false;
+                btnSiguiente.Enabled = false;
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (indiceImagen > 0)
+            {
+                indiceImagen--;
+                mostrarImagenActual();
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (indiceImagen < imagenesArticuloActual.Count - 1)
+            {
+                indiceImagen++;
+                mostrarImagenActual();
             }
         }
 
@@ -167,6 +211,105 @@ namespace winform_app
             dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
             ocultarColumnas();
+        }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCampo.SelectedItem == null)
+                return;
+            string opcion = cboCampo.SelectedItem.ToString();
+            cboCriterio.Items.Clear();
+
+            if (opcion == "Precio")
+            {
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void btnBuscarFiltro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if (validarFiltro())
+                    return;
+
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+
+                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private bool validarFiltro()
+        {
+            if (cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione el campo para filtrar.");
+                return true;
+            }
+            if (cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione el criterio para filtrar.");
+                return true;
+            }
+            if (cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                {
+                    MessageBox.Show("Debe ingresar un valor numérico en el filtro.");
+                    return true;
+                }
+                if (!decimal.TryParse(txtFiltroAvanzado.Text, out _))
+                {
+                    MessageBox.Show("Solo ingrese números para filtrar por precio.");
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmAltaArticulo detalle = new frmAltaArticulo(seleccionado, true);
+                detalle.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un artículo para ver su detalle.");
+            }
+        }
+
+        private void btnLimpiarFiltro_Click(object sender, EventArgs e)
+        {
+            // Limpia el filtro rápido en memoria
+            txtFiltro.Text = string.Empty;
+
+            // Limpia y resetea los campos del filtro avanzado
+            cboCampo.SelectedIndex = -1;
+            cboCriterio.Items.Clear();
+            cboCriterio.SelectedIndex = -1;
+            txtFiltroAvanzado.Text = string.Empty;
+
+            // Recarga la lista original completa desde la base de datos
+            cargar();
         }
     }
 }
