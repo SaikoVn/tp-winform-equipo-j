@@ -16,3 +16,12 @@ C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\negocio\obj\
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\negocio\obj\Debug\negocio.csproj.Up2Date
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\negocio\obj\Debug\negocio.dll
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\negocio\obj\Debug\negocio.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\bin\Debug\negocio.dll
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\bin\Debug\negocio.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\bin\Debug\dominio.dll
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\bin\Debug\dominio.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\obj\Debug\negocio.dll
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\negocio\obj\Debug\negocio.pdb

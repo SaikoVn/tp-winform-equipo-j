@@ -49,9 +49,8 @@ namespace negocio
             comando.Connection = conexion;
             try
             {
-                comando.Connection = conexion;
+                conexion.Open();
                 comando.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {

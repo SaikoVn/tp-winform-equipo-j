@@ -10,3 +10,9 @@ C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\dominio\obj\
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\dominio\obj\Debug\dominio.dll
 C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\dad\tp-winform-equipo-j\dominio\obj\Debug\dominio.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\bin\Debug\dominio.dll
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\bin\Debug\dominio.pdb
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\obj\Debug\dominio.dll
+C:\Users\quiro\OneDrive\Desktop\ProyectoUTN\caf\tp-winform-equipo-j\dominio\obj\Debug\dominio.pdb
