@@ -1,4 +1,4 @@
-﻿using dominio;
+using dominio;
 using negocio;
 using System;
 using System.Collections.Generic;
@@ -24,16 +24,32 @@ namespace winform_app
 
         private void cargar()
         {
-            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Clear();
+            cboCampo.Items.Add("Código");
             cboCampo.Items.Add("Nombre");
             cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Categoría");
+            cboCampo.Items.Add("Precio");
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 listaArticulo = negocio.listar();
+                dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulo;
                 ocultarColumnas();
-                cargarImagen(listaArticulo[0].ImagenUrl);
+
+                if (listaArticulo != null && listaArticulo.Count > 0)
+                {
+                    cargarImagen(listaArticulo[0].ImagenUrl);
+                }
+                else
+                {
+                    cargarImagen("");
+                    lblPaginacion.Text = "0 / 0";
+                    btnAnterior.Enabled = false;
+                    btnSiguiente.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -43,9 +59,14 @@ namespace winform_app
 
         private void ocultarColumnas()
         {
-            dgvArticulos.Columns["Id"].Visible = false;
-            dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C2";
+            if (dgvArticulos.Columns["Id"] != null)
+                dgvArticulos.Columns["Id"].Visible = false;
+            if (dgvArticulos.Columns["ImagenUrl"] != null)
+                dgvArticulos.Columns["ImagenUrl"].Visible = false;
+            if (dgvArticulos.Columns["Imagenes"] != null)
+                dgvArticulos.Columns["Imagenes"].Visible = false;
+            if (dgvArticulos.Columns["Precio"] != null)
+                dgvArticulos.Columns["Precio"].DefaultCellStyle.Format = "C2";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -65,10 +86,10 @@ namespace winform_app
                 pbxArticulo.Load(imagen);
             }
             catch (Exception)
-            {
+            { 
                 try
                 {
-                    
+                    // Intenta un enlace de una imagen vacia por defecto
                     pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
                 }
                 catch (Exception)
@@ -94,6 +115,14 @@ namespace winform_app
                 imagenesArticuloActual = imgNegocio.listar(seleccionado.Id);
                 indiceImagen = 0;
                 mostrarImagenActual();
+            }
+            else
+            {
+                imagenesArticuloActual = null;
+                cargarImagen("");
+                lblPaginacion.Text = "0 / 0";
+                btnAnterior.Enabled = false;
+                btnSiguiente.Enabled = false;
             }
         }
 
@@ -273,7 +302,8 @@ namespace winform_app
                     MessageBox.Show("Debe ingresar un valor numérico en el filtro.");
                     return true;
                 }
-                if (!decimal.TryParse(txtFiltroAvanzado.Text, out _))
+                string filtroLimpio = txtFiltroAvanzado.Text.Trim().Replace(".", ",");
+                if (!decimal.TryParse(filtroLimpio, out _))
                 {
                     MessageBox.Show("Solo ingrese números para filtrar por precio.");
                     return true;
@@ -309,6 +339,27 @@ namespace winform_app
             txtFiltroAvanzado.Text = string.Empty;
 
             // Recarga la lista original completa desde la base de datos
+            cargar();
+        }
+
+        private void menuMarcas_Click(object sender, EventArgs e)
+        {
+            frmMarcasCategorias marcas = new frmMarcasCategorias(0);
+            marcas.ShowDialog();
+            cargar();
+        }
+
+        private void menuCategorias_Click(object sender, EventArgs e)
+        {
+            frmMarcasCategorias categorias = new frmMarcasCategorias(1);
+            categorias.ShowDialog();
+            cargar();
+        }
+
+        private void menuMarcasCategorias_Click(object sender, EventArgs e)
+        {
+            frmMarcasCategorias marcasCategorias = new frmMarcasCategorias(0);
+            marcasCategorias.ShowDialog();
             cargar();
         }
     }

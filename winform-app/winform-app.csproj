@@ -60,6 +60,12 @@
     <Compile Include="frmAltaArticulo.Designer.cs">
       <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMarcasCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcasCategorias.Designer.cs">
+      <DependentUpon>frmMarcasCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -67,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaArticulo.resx">
       <DependentUpon>frmAltaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarcasCategorias.resx">
+      <DependentUpon>frmMarcasCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

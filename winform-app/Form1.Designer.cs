@@ -1,4 +1,4 @@
-﻿namespace winform_app
+namespace winform_app
 {
     partial class Form1
     {
@@ -47,12 +47,21 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.lblPaginacion = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuAdministracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMarcas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuMarcasCategorias = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(52, 100);
@@ -235,6 +244,53 @@
             this.lblPaginacion.TabIndex = 26;
             this.lblPaginacion.Text = "0 / 0";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAdministracion});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1014, 24);
+            this.menuStrip1.TabIndex = 27;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuAdministracion
+            // 
+            this.menuAdministracion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMarcas,
+            this.menuCategorias,
+            this.toolStripSeparator1,
+            this.menuMarcasCategorias});
+            this.menuAdministracion.Name = "menuAdministracion";
+            this.menuAdministracion.Size = new System.Drawing.Size(100, 20);
+            this.menuAdministracion.Text = "&Administración";
+            // 
+            // menuMarcas
+            // 
+            this.menuMarcas.Name = "menuMarcas";
+            this.menuMarcas.Size = new System.Drawing.Size(204, 22);
+            this.menuMarcas.Text = "Administrar &Marcas...";
+            this.menuMarcas.Click += new System.EventHandler(this.menuMarcas_Click);
+            // 
+            // menuCategorias
+            // 
+            this.menuCategorias.Name = "menuCategorias";
+            this.menuCategorias.Size = new System.Drawing.Size(204, 22);
+            this.menuCategorias.Text = "Administrar &Categorías...";
+            this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(201, 6);
+            // 
+            // menuMarcasCategorias
+            // 
+            this.menuMarcasCategorias.Name = "menuMarcasCategorias";
+            this.menuMarcasCategorias.Size = new System.Drawing.Size(204, 22);
+            this.menuMarcasCategorias.Text = "Marcas y Categorías...";
+            this.menuMarcasCategorias.Click += new System.EventHandler(this.menuMarcasCategorias_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,14 +315,18 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulos);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Catálogo de Artículos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +353,13 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Label lblPaginacion;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuAdministracion;
+        private System.Windows.Forms.ToolStripMenuItem menuMarcas;
+        private System.Windows.Forms.ToolStripMenuItem menuCategorias;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem menuMarcasCategorias;
     }
 }
+
 

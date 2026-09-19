@@ -1,4 +1,4 @@
-﻿using dominio;
+using dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,8 @@ namespace negocio
                     if (!(datos.Lector["Descripcion"] is DBNull))
                         aux.Descripcion = (string)datos.Lector["Descripcion"];
 
-                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.Precio = (decimal)datos.Lector["Precio"];
 
                     // Validación para Marca
                     aux.Marca = new Marca();
@@ -105,7 +106,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio Where Id = @id; Update IMAGENES set ImagenUrl = @imagenUrl Where IdArticulo = @id;");
+                datos.setearConsulta("Update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio Where Id = @id;");
 
                 datos.setearParametro("@codigo", art.Codigo);
                 datos.setearParametro("@nombre", art.Nombre);
@@ -114,7 +115,6 @@ namespace negocio
                 datos.setearParametro("@idMarca", (art.Marca != null && art.Marca.Id != 0) ? (object)art.Marca.Id : DBNull.Value);
                 datos.setearParametro("@idCategoria", (art.Categoria != null && art.Categoria.Id != 0) ? (object)art.Categoria.Id : DBNull.Value);
                 datos.setearParametro("@precio", art.Precio);
-                datos.setearParametro("@imagenUrl", art.ImagenUrl ?? (object)DBNull.Value);
                 datos.setearParametro("@id", art.Id);
 
                 datos.ejecutarAccion();
@@ -172,40 +172,34 @@ namespace negocio
                             consulta += "A.Precio = @filtro";
                             break;
                     }
-                    datos.setearParametro("@filtro", decimal.Parse(filtro));
+                    decimal valorFiltro = 0;
+                    decimal.TryParse(filtro.Trim().Replace(".", ","), out valorFiltro);
+                    datos.setearParametro("@filtro", valorFiltro);
                 }
-                else if (campo == "Nombre")
+                else
                 {
+                    string columna = "A.Nombre";
+                    if (campo == "Código")
+                        columna = "A.Codigo";
+                    else if (campo == "Nombre")
+                        columna = "A.Nombre";
+                    else if (campo == "Marca")
+                        columna = "M.Descripcion";
+                    else if (campo == "Categoría")
+                        columna = "C.Descripcion";
+
                     switch (criterio)
                     {
                         case "Comienza con":
-                            consulta += "A.Nombre like @filtro";
+                            consulta += columna + " like @filtro";
                             datos.setearParametro("@filtro", filtro + "%");
                             break;
                         case "Termina con":
-                            consulta += "A.Nombre like @filtro";
+                            consulta += columna + " like @filtro";
                             datos.setearParametro("@filtro", "%" + filtro);
                             break;
                         default:
-                            consulta += "A.Nombre like @filtro";
-                            datos.setearParametro("@filtro", "%" + filtro + "%");
-                            break;
-                    }
-                }
-                else // Marca
-                {
-                    switch (criterio)
-                    {
-                        case "Comienza con":
-                            consulta += "M.Descripcion like @filtro";
-                            datos.setearParametro("@filtro", filtro + "%");
-                            break;
-                        case "Termina con":
-                            consulta += "M.Descripcion like @filtro";
-                            datos.setearParametro("@filtro", "%" + filtro);
-                            break;
-                        default:
-                            consulta += "M.Descripcion like @filtro";
+                            consulta += columna + " like @filtro";
                             datos.setearParametro("@filtro", "%" + filtro + "%");
                             break;
                     }
@@ -221,7 +215,8 @@ namespace negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.Precio = (decimal)datos.Lector["Precio"];
 
                     if (!(datos.Lector["ImagenUrl"] is DBNull))
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];

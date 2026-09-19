@@ -1,4 +1,4 @@
-﻿using dominio;
+using dominio;
 using negocio;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace winform_app
             Text = "Modificar Artículo";
         }
 
-        // // Constructor para modo solo lectura
+        // Constructor para modo solo lectura
         public frmAltaArticulo(Articulo articulo, bool soloLectura)
         {
             InitializeComponent();
@@ -38,6 +38,8 @@ namespace winform_app
                 txtDescripcion.ReadOnly = true;
                 txtPrecio.ReadOnly = true;
                 txtUrlImagen.ReadOnly = true;
+                btnAgregarImagen.Enabled = false;
+                btnEliminarImagen.Enabled = false;
                 cboMarca.Enabled = false;
                 cboCategoria.Enabled = false;
                 btnAceptar.Visible = false;
@@ -101,7 +103,14 @@ namespace winform_app
             }
             catch (Exception)
             {
-                pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                try
+                {
+                    pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                }
+                catch (Exception)
+                {
+                    pbxArticulo.Image = null;
+                }
             }
         }
 
@@ -141,7 +150,14 @@ namespace winform_app
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
-                
+                // Si escribió una URL en el TextBox pero olvidó tocar el botón '+', la incluimos
+                if (!string.IsNullOrWhiteSpace(txtUrlImagen.Text))
+                {
+                    string urlPendiente = txtUrlImagen.Text.Trim();
+                    if (!listaUrls.Contains(urlPendiente))
+                        listaUrls.Add(urlPendiente);
+                }
+
                 ImagenNegocio imgNegocio = new ImagenNegocio();
 
                 if (articulo.Id != 0) // Modificación
@@ -154,7 +170,7 @@ namespace winform_app
                         imgNegocio.agregar(articulo.Id, url);
                     }
 
-                    MessageBox.Show("Modificado exitosamente.");
+                    MessageBox.Show("Modificado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else // Alta nueva
                 {
@@ -165,7 +181,7 @@ namespace winform_app
                         imgNegocio.agregar(idNuevo, url);
                     }
 
-                    MessageBox.Show("Agregado exitosamente.");
+                    MessageBox.Show("Agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 Close();
@@ -189,6 +205,20 @@ namespace winform_app
             {
                 MessageBox.Show("El campo 'Nombre' es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombre.Focus();
+                return false;
+            }
+
+            if (cboMarca.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una Marca.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMarca.Focus();
+                return false;
+            }
+
+            if (cboCategoria.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una Categoría.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboCategoria.Focus();
                 return false;
             }
 
@@ -239,9 +269,13 @@ namespace winform_app
             }
         }
 
-        private void btnCancelar_Click_1(object sender, EventArgs e)
+        private void lbxImagenes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Close();
+            if (lbxImagenes.SelectedItem != null)
+            {
+                string url = lbxImagenes.SelectedItem.ToString();
+                cargarImagen(url);
+            }
         }
     }
 }
