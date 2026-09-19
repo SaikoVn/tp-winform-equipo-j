@@ -28,3 +28,9 @@ C:\Users\quiro\source\fa\dominio\obj\Debug\dominio.csproj.AssemblyReference.cach
 C:\Users\quiro\source\fa\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\quiro\source\fa\dominio\obj\Debug\dominio.dll
 C:\Users\quiro\source\fa\dominio\obj\Debug\dominio.pdb
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\bin\Debug\dominio.dll
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\bin\Debug\dominio.pdb
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\obj\Debug\dominio.dll
+C:\Users\quiro\source\fa\tp-winform-equipo-j\dominio\obj\Debug\dominio.pdb
